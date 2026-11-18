@@ -1,0 +1,14 @@
+[package]
+name = "potoo-hedy-interpreter"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.93"
+license = "GPL-3.0-or-later"
+repository = "https://github.com/diegopn/potoo-hedy-interpreter"
+homepage = "https://diegopn.github.io/potoo-site/manual/hedy/"
+readme = "README.md"
+description = "An evaluation scaffold for an independent Rust implementation of Hedy, a multilingual gradual programming language."
+
+[lib]
+name = "potoo_hedy_interpreter"
+path = "src/lib.rs"
