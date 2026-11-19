@@ -10,4 +10,6 @@ For other project concerns, see [CONTRIBUTING.md](CONTRIBUTING.md) and [CODE_OF_
 
 ## Current scope
 
-This repository contains only a minimal Rust crate scaffold. It does not parse or execute Hedy source and has no language runtime or sandbox. This policy must be updated before source execution is introduced.
+This repository parses and interprets Hedy source in a Rust runtime. The interpreter does not expose operating-system commands, native code loading, or direct filesystem access. Programs can still consume host resources through loops, recursion, input/output, sleep, graphics, audio, and keyboard services.
+
+Execution stops after a configurable statement limit (one million by default), and function calls have a separate depth limit. Hosts that enable graphics, audio, keyboard, or other external services should apply their own resource and access limits. Do not assume the language statement limit constrains time spent inside a host callback.

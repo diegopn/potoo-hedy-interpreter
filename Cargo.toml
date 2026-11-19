@@ -7,8 +7,12 @@ license = "GPL-3.0-or-later"
 repository = "https://github.com/diegopn/potoo-hedy-interpreter"
 homepage = "https://diegopn.github.io/potoo-site/manual/hedy/"
 readme = "README.md"
-description = "An evaluation scaffold for an independent Rust implementation of Hedy, a multilingual gradual programming language."
+description = "A host-driven Rust interpreter for the English Hedy language profile, levels 1–16."
 
 [lib]
 name = "potoo_hedy_interpreter"
 path = "src/lib.rs"
+
+[[bin]]
+name = "potoo-hedy"
+path = "src/bin/potoo-hedy.rs"
